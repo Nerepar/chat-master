@@ -1,0 +1,18 @@
+<div class="ChatAddRoom__wrapper full-screen flex flex-center">
+    <div class="ChatAddRoom-input__wrapper radius-border flex flex-column">
+        <div class="ChatAddRoom-close__wrapper flex flex-justify-end">
+            <i class="fa fa-times" @click="closeAddRoom"></i>
+        </div>
+        <input
+                class="ChatAddRoom-text__wrapper"
+                type="text"
+                v-model="room.title"
+                placeholder="Введите название">
+        <button
+                :disabled="!(room.title)"
+                class="ChatAddRoom-save__wrapper"
+                @click="addRoom">
+                Добавить комнату
+        </button>
+    </div>
+</div>
